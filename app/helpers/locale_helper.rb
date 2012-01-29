@@ -4,10 +4,10 @@ module LocaleHelper
   def locale_enabled?(locale); I18n.locale_enabled?(locale) end
 
   def current_locale
-    session[:locale]
+    session[:locale] || I18n.default_locale
   end
   def current_locale?(locale)
-    locale == current_locale
+    locale.to_s == current_locale.to_s
   end
   def link_to_locale(locale, name = nil, *args)
     link_to(name || locale_name(locale), "/#{locale}#{request && request.path}", *args) if locale_enabled?(locale)
