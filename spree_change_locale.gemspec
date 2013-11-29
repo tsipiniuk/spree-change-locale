@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_change_locale'
+  s.name        = 'spree-change-locale'
   s.version     = '0.6'
   s.summary     = 'Easy locale change for Spree'
   s.description = 'Easy locale change for Spree'
