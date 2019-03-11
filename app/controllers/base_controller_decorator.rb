@@ -1,5 +1,5 @@
 Spree::BaseController.class_eval do
-  before_filter :set_locale, :if => proc { !session[:locale] }
+  before_action :set_locale, :if => proc { !session[:locale] }
 
   protected
   def set_locale
